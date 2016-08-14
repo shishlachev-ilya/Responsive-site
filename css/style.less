@@ -1,0 +1,334 @@
+@import "mixin.less";
+
+/****** basic styles *****/
+
+@font-face {
+    font-family: 'CABNDWebBold';
+    src: url('fonts/CABNDWebBold.eot');
+    src: url('fonts/CABNDWebBold.eot') format('embedded-opentype'),
+         url('fonts/CABNDWebBold.woff2') format('woff2'),
+         url('fonts/CABNDWebBold.woff') format('woff'),
+         url('fonts/CABNDWebBold.ttf') format('truetype'),
+         url('fonts/CABNDWebBold.svg#CABNDWebBold') format('svg');
+}
+
+@font-face {
+    font-family: 'Snap';
+    src: url('fonts/Snap.eot');
+    src: url('fonts/Snap.eot') format('embedded-opentype'),
+         url('fonts/Snap.woff2') format('woff2'),
+         url('fonts/Snap.woff') format('woff'),
+         url('fonts/Snap.ttf') format('truetype'),
+         url('fonts/Snap.svg#Snap') format('svg');
+}
+
+@font-face {
+    font-family: 'TrajanProRegular';
+    src: url('fonts/TrajanProRegular.eot');
+    src: url('fonts/TrajanProRegular.eot') format('embedded-opentype'),
+         url('fonts/TrajanProRegular.woff2') format('woff2'),
+         url('fonts/TrajanProRegular.woff') format('woff'),
+         url('fonts/TrajanProRegular.ttf') format('truetype'),
+         url('fonts/TrajanProRegular.svg#TrajanProRegular') format('svg');
+}
+
+
+.webbold{
+	font-family: 'CABNDWebBold';
+}
+
+.snap{
+	font-family: 'Snap';
+}
+
+.trojan{
+	font-family: 'TrajanProRegular';
+}
+
+body{
+	font-family: Arial;
+	font-size: 1.000em;
+	color: #000;
+	background-color: #3cadcd;
+	margin: 0;
+}
+
+.left{float: left;}
+
+.right{float: right;}
+
+.wrapper{
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+/***** Clearfix *****/
+
+.container:before,
+.container:after,
+.row:before,
+.row:after{
+   content: "";
+   display: table;
+}
+.container:after, 
+.row:after{
+   clear: both;
+}
+
+/****** header  ******/
+
+#header{
+	background: linear-gradient(#e3e3e3,#fcfcfc);
+	padding: 25px 0 13px 0;
+	box-shadow: 0 2px #0f2b33;
+	.logo{
+		text-align: center;
+	}
+	h1{
+		margin: 13px 0 0 0;
+		font-family: "Freestyle Script";
+		font-size: 2.500em;
+		line-height: 30px;
+	}
+	.header-social{
+		margin-top: 35px;
+		text-align: right;
+		a{
+			margin-right: 4px;
+			&:last-child{
+				margin-right: 16px;
+			}
+		}
+	}
+}
+
+/****** banner ******/
+#banner{
+	background: url(../img/banner-bg.jpg);
+	background-size: cover;
+	margin-top: 10px;
+	box-shadow: 0 2px #0f2b33;
+	h1{
+		.webbold;
+		text-align: right;
+		color: #73a806;
+		font-size: 1.50em;
+		margin: 30px 16px 14px 0;
+	}
+	p{
+		font-family: "Arial";
+		text-align: right;
+		color: #030000;
+		margin: 0 16px 30px 0;
+		font-size: 0.75em;
+	}
+	a{
+		font-family: "Arial";
+		font-weight: bold;
+		font-size: 1.125em;
+		text-transform: uppercase;
+		text-align: right;
+		display: block;
+		text-decoration: none;
+		color: #000000;
+		margin-bottom: 90px;
+		margin-right: 16px;
+		span{
+			.snap;
+			color: #fff;
+			background: #000;
+			padding: 10px 5px;
+		}
+	}
+}
+
+/***** main-content ******/
+.box{
+	
+	.img-box{
+	height: 125px;
+	width: 320px;
+	background: #fff;
+	margin: 2px 0; 
+		img{
+		width: 100%;
+		height: auto;
+		}
+	}
+	.m-left{
+		margin-left: 5px;
+	}
+	a{
+		.main-content-text("Trebuchet MS", 1.125em, 12px, none, #000, #fff);
+		width: 95%;
+		display: inline-block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		box-shadow: 0 2px #0f2b33;
+		position: relative;
+		&:after{
+			content: url(../img/arrow.png);
+			position: absolute;
+			top: 12px;
+			right: 15px;
+		}
+	}
+}
+.bg-white{
+	background: #fff;
+	margin-top: 2px;
+	box-shadow: 0 2px #0f2b33;
+}
+#main-content{
+	p{
+		font-size: 0.75em;
+		line-height: 18px;
+		margin: 0;
+		padding: 35px 0 40px 10px;
+	}
+	h1{
+		.trojan;
+		text-align: center;
+		padding-top: 55px;
+		margin: 0;
+		font-size: 1.625em;
+		font-weight: 100;
+	}
+}
+
+/***** footer *****/
+#footer{
+	p{
+		.main-content-text("Arial", 0.688em, 0, none, #fff, none);
+		text-align: center;
+		a{
+			color: #fff;
+		}
+	}
+}
+
+
+	
+	
+@media (min-width:321px) and (max-width:480px){
+	#header .logo{
+		width: 100%;
+	}//#header .logo
+	#header .header-name{
+		width: 100%;
+		margin: 15px 0;
+		h1{
+			font-size: 2.0em;
+    		text-align: center;
+		}
+	}//header-name
+	#header .header-social{
+		margin-top: 0;
+		width: 100%;
+		a{
+			margin-right: 33.33%;
+		}
+	}//#header .header-social
+	
+	#banner h1{
+		text-align: center;
+		font-size: 2.0em;
+	}
+	#banner p{
+		color: #73a806;
+	}
+	#banner a{
+		color: #73a806;
+	}
+	#main-content .box{
+		width: 100%;
+		.img-box{
+			width: 100%;
+			height: auto;
+			background: #3cadcd;
+		}
+		a{
+			width: 100%;
+		}
+		.m-left{
+			margin-left: 0;
+		}
+		
+	}//#main-content .box
+	#main-content h1{
+		font-size: 1.0em;
+	}
+	#main-content p{
+		font-size: 0.7em;
+	}
+	.bg-white-header{
+		width: 100%;
+		
+	}
+	.bg-white-content{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (min-width:481px) and (max-width:768px){
+	
+	#header .logo{
+		width: 100%;
+	}//#header .logo
+	#header .header-name{
+		width: 100%;
+		margin: 15px 0;
+		h1{
+			font-size: 3.0em;
+    		text-align: center;
+		}
+	}//header-name
+	#header .header-social{
+		margin-top: 0;
+		width: 85%;
+		margin-right: 12%;
+		a{
+			margin-right: 33.33%;
+		}
+	}//#header .header-social
+	
+	#banner h1{
+		text-align: center;
+		font-size: 2.0em;
+	}
+	#banner p{
+		color: #000;
+	}
+	#banner a{
+		color: #000;
+	}
+	#main-content .box{
+		width: 100%;
+		.img-box{
+			width: 100%;
+			height: auto;
+			background: #3cadcd;
+		}
+		a{
+			width: 98.3%;
+		}
+		.m-left{
+			margin-left: 0;
+		}
+	}//#main-content .box
+	.bg-white > div{
+		width: 100%;
+		p{
+			text-align: center;
+		}
+	}//bg-white
+
+}
+
+@media (min-width:769px) and (max-width:992px){}
+@media (min-width:993px) and (max-width:1200px){}
+
+
+
